@@ -9,6 +9,7 @@
     "Status": "stream-pro:views/stream/notes/status",
     "Assign": "stream-pro:views/stream/notes/assign",
     "Relate": "stream-pro:views/stream/notes/relate",
+    "Unrelate": "stream-pro:views/stream/notes/unrelate",
     "MentionInPost": "stream-pro:views/stream/notes/mention-in-post"
   }
 }

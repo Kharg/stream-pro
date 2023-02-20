@@ -1,8 +1,7 @@
-define('stream-pro:views/stream/notes/update', 'views/stream/notes/update', function (Dep) {
+define('stream-pro:views/stream/notes/unrelate', 'views/stream/notes/unrelate', function (Dep) {
     return Dep.extend({
         afterRender: function () {
             Dep.prototype.afterRender.call(this);
-            this.$el.find('.details').removeClass('hidden');
             $("div.stream-date-container > * > span").each(function(){
                 var element = $(this).text();
                 var title = $(this).attr('title');
