@@ -40,7 +40,7 @@ define('stream-pro:views/admin/settings', ['views/settings/record/edit'], functi
         detailLayout: [
             {
                 "rows": [
-                    [{"name": "streamUpdatesExanded"}],
+                    [{"name": "streamFullDateTime"}, {"name": "streamUpdatesExanded"}],
                 ],
                 "style": "default",
                 "label": "Stream Pro Settings"
@@ -59,6 +59,7 @@ define('stream-pro:views/admin/settings', ['views/settings/record/edit'], functi
         resetToDefault: function () {
             Espo.Ajax
             .putRequest('Settings/1', {
+                streamFullDateTime: this.getMetadata().get(['entityDefs', this.scope, 'fields', 'streamFullDateTime', 'default']),
                 streamUpdatesExanded: this.getMetadata().get(['entityDefs', this.scope, 'fields', 'streamUpdatesExanded', 'default']),
             })
             .then(response => {

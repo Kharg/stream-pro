@@ -1,5 +1,10 @@
 {
     "fields": {
+    "streamFullDateTime": {
+            "type": "bool",
+            "default": false,
+            "tooltip": true
+    },
     "streamUpdatesExanded": {
           "type": "bool",
           "default": false,

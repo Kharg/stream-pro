@@ -5,12 +5,11 @@ define('stream-pro:views/stream/notes/update', 'views/stream/notes/update', func
             if (this.getConfig().get('streamUpdatesExanded')) {
                 this.$el.find('.details').removeClass('hidden');
             }
-            $("div.stream-date-container > * > span").each(function(){
-                var element = $(this).text();
-                var title = $(this).attr('title');
-                var datetime = element.replace(element, title);
-                $(this).text(datetime);
-            });
+            if (this.getConfig().get('streamFullDateTime')) {
+                $("div.stream-date-container a span").text(function() {
+                    return $(this).attr('title');
+                });
+            }
         }
     });
 });

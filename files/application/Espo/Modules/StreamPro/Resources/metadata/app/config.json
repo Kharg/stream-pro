@@ -1,5 +1,8 @@
 {
     "params": {
+        "streamFullDateTime": {
+            "level": "global"
+        },
         "streamUpdatesExanded": {
             "level": "global"
         }
