@@ -1,0 +1,8 @@
+{
+    "fields": {
+        "streamUpdatesExanded": "Stream Updates Expanded"
+    },
+    "tooltips": {
+        "streamUpdatesExanded": "Expand the Stream Updates by default."
+    }
+}

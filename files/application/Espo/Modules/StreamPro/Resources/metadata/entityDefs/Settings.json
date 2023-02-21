@@ -1,0 +1,9 @@
+{
+    "fields": {
+    "streamUpdatesExanded": {
+          "type": "bool",
+          "default": false,
+          "tooltip": true
+        }
+    }
+}
