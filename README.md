@@ -13,6 +13,7 @@ This Extension shows the Full Time and Date for EspoCRM Stream Notes instead of 
 This extension adds two features to the EspoCRM stream: 
 - displaying the full date and time; By default, EspoCRM shows a short datetime on the stream, but with this extension, users can see the full date and time directly in the stream. 
 - Stream updates expanded by default, so users can see the full update without having to click on the 'expand' button.
+
 After installation visit /#Admin/StreamPro to enable/disable features.
 
 ![image](https://user-images.githubusercontent.com/32223252/221196649-8c7339fd-79ac-41b7-b514-72d588738428.png)
