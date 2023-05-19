@@ -1,10 +1,10 @@
 {
     "fields": {
         "streamFullDateTime": "Full Date Time",
-        "streamUpdatesExanded": "Stream Updates Expanded"
+        "streamUpdatesExpanded": "Stream Updates Expanded"
     },
     "tooltips": {
         "streamFullDateTime": "Show Full Date Time for Stream Notes.",
-        "streamUpdatesExanded": "Expand the Stream Updates by default."
+        "streamUpdatesExpanded": "Expand the Stream Updates by default."
     }
 }

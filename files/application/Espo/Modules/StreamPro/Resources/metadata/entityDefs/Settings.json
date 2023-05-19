@@ -5,7 +5,7 @@
             "default": false,
             "tooltip": true
     },
-    "streamUpdatesExanded": {
+    "streamUpdatesExpanded": {
           "type": "bool",
           "default": false,
           "tooltip": true

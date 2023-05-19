@@ -1,5 +1,5 @@
 {
-    "itemViews": {
+  "itemViews": {
     "Post": "stream-pro:views/stream/notes/post",
     "EmailSent": "stream-pro:views/stream/notes/email-sent",
     "Create": "stream-pro:views/stream/notes/create",
@@ -10,6 +10,7 @@
     "Assign": "stream-pro:views/stream/notes/assign",
     "Relate": "stream-pro:views/stream/notes/relate",
     "Unrelate": "stream-pro:views/stream/notes/unrelate",
-    "MentionInPost": "stream-pro:views/stream/notes/mention-in-post"
+    "MentionInPost": "stream-pro:views/stream/notes/mention-in-post",
+    "EventConfirmation": "stream-pro:views/stream/notes/event-confirmation"
   }
 }
