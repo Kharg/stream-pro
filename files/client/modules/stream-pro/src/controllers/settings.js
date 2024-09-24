@@ -1,25 +1,19 @@
-define('stream-pro:controllers/settings', 'controllers/admin', function (Dep) {
+define(['stream-pro:controllers/settings'], (RecordController) => {
+    return class extends RecordController {
 
-    return Dep.extend({
+        defaultAction = 'index'
 
-        defaultAction: 'index',
-
-        checkAccess: function () {
+        checkAccess() {
             if (this.getUser().isAdmin()) {
                 return true;
             }
-
             return false;
-        },
+        }
 
-        index: function () {
-            this.actionIndex();
-        },
+        actionIndex() {
+            const model = this.getSettingsModel();
 
-        actionIndex: function () {
-            var model = this.getSettingsModel();
-
-            model.once('sync', function () {
+            model.once('sync', function() {
                 model.id = '1';
                 this.main('views/settings/edit', {
                     model: model,
@@ -27,7 +21,8 @@ define('stream-pro:controllers/settings', 'controllers/admin', function (Dep) {
                     recordView: 'stream-pro:views/admin/settings'
                 });
             }, this);
+            
             model.fetch();
         }
-    });
+    }
 });

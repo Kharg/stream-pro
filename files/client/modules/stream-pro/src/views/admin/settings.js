@@ -1,10 +1,9 @@
-define('stream-pro:views/admin/settings', ['views/settings/record/edit'], function (Dep) {
+define('stream-pro:views/admin/settings', ['views/settings/record/edit'], (SettingsEditRecordView) => {
+    return class extends SettingsEditRecordView {
 
-    return Dep.extend({
+        gridLayoutType = 'record'
 
-        gridLayoutType: 'record',
-
-        events: {
+        events = {
             'click button[data-action="save"]': function () {
                 this.actionSave();
                 this.broadcastUpdate();
@@ -18,9 +17,9 @@ define('stream-pro:views/admin/settings', ['views/settings/record/edit'], functi
                     this.broadcastUpdate();
                 });
             },
-        },
+        }
 
-        buttonList: [
+        buttonList = [
             {
                 name: 'save',
                 label: 'Save',
@@ -35,9 +34,9 @@ define('stream-pro:views/admin/settings', ['views/settings/record/edit'], functi
                 name: 'resetToDefault',
                 label: 'Restore',
             }
-        ],
+        ];
 
-        detailLayout: [
+        detailLayout = [
             {
                 "rows": [
                     [{"name": "streamFullDateTime"}, {"name": "streamUpdatesExpanded"}],
@@ -45,18 +44,18 @@ define('stream-pro:views/admin/settings', ['views/settings/record/edit'], functi
                 "style": "default",
                 "label": "Stream Pro Settings"
             }
-        ],
+        ];
 
-        setup: function () {
-            Dep.prototype.setup.call(this);
-        },
+        setup() {
+            super.setup();
+        }
 
-        afterSave: function () {
-            Dep.prototype.afterSave.call(this);
+        afterSave() {
+            super.afterSave();
             window.location.reload();
-            },
-
-        resetToDefault: function () {
+        }
+    
+        resetToDefault() {
             Espo.Ajax
             .putRequest('Settings/1', {
                 streamFullDateTime: this.getMetadata().get(['entityDefs', this.scope, 'fields', 'streamFullDateTime', 'default']),
@@ -66,11 +65,11 @@ define('stream-pro:views/admin/settings', ['views/settings/record/edit'], functi
                 this.model.fetch();
                 window.location.reload();
             });
-        },
+        }
 
-        broadcastUpdate: function () {
+        broadcastUpdate() {
             this.getHelper().broadcastChannel.postMessage('reload');
-        },
+        }
 
-    });
+    }
 });

@@ -1,12 +1,14 @@
-define('stream-pro:views/stream/notes/relate', 'views/stream/notes/relate', function (Dep) {
-    return Dep.extend({
-        afterRender: function () {
-            Dep.prototype.afterRender.call(this);
-            if (this.getConfig().get('streamFullDateTime')) {
+define('stream-pro:views/stream/notes/relate', ['views/stream/notes/relate'], (RelateNoteStreamView) => {
+
+    return class extends RelateNoteStreamView {
+ 
+         afterRender() {
+             super.afterRender();
+             if (this.getConfig().get('streamFullDateTime')) {
                 $("div.stream-date-container a span").text(function() {
                     return $(this).attr('title');
                 });
             }
-        }
-    });
+         }
+     }
 });
