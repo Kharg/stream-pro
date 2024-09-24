@@ -23,8 +23,7 @@ After installation visit /#Admin/StreamPro to enable/disable features.
 
 ## Requires
 
-- EspoCRM >= 7.2
-- PHP >= 7.2
+- EspoCRM >= 8.2
 
 ## Installation
 
