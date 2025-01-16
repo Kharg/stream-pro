@@ -1,6 +1,6 @@
 {
-    "extSettings": {
-        "label": "Extension Settings",
+    "khargExtensions": {
+        "label": "Kharg's Extensions",
         "itemList": [
             "__APPEND__",
             {

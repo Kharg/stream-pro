@@ -1,6 +1,6 @@
 {
     "name": "Stream pro",
-    "version": "2.5.0",
+    "version": "2.5.1",
     "type": "extension",
     "acceptableVersions": [
         ">=8.2.0"

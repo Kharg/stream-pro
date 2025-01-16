@@ -3,22 +3,6 @@ define('stream-pro:views/admin/settings', ['views/settings/record/edit'], (Setti
 
         gridLayoutType = 'record'
 
-        events = {
-            'click button[data-action="save"]': function () {
-                this.actionSave();
-                this.broadcastUpdate();
-            },
-            'click button[data-action="cancel"]': function () {
-                this.cancel();
-            },
-            'click button[data-action="resetToDefault"]': function () {
-                this.confirm(this.translate('confirmation', 'messages'), () => {
-                    this.resetToDefault();
-                    this.broadcastUpdate();
-                });
-            },
-        }
-
         buttonList = [
             {
                 name: 'save',
@@ -48,6 +32,22 @@ define('stream-pro:views/admin/settings', ['views/settings/record/edit'], (Setti
 
         setup() {
             super.setup();
+
+            this.events['click button[data-action="save"]'] = () => {
+                this.actionSave();
+                this.broadcastUpdate();
+            };
+            
+            this.events['click button[data-action="cancel"]'] = () => {
+                this.cancel();
+            };
+            
+            this.events['click button[data-action="resetToDefault"]'] = () => {
+                this.confirm(this.translate('confirmation', 'messages'), () => {
+                    this.resetToDefault();
+                    this.broadcastUpdate();
+                });
+            };
         }
 
         afterSave() {

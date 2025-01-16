@@ -10,7 +10,7 @@ define(['stream-pro:controllers/settings'], (RecordController) => {
             return false;
         }
 
-        actionIndex() {
+        index() {
             const model = this.getSettingsModel();
 
             model.once('sync', function() {

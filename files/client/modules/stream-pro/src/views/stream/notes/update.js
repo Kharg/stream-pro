@@ -7,6 +7,8 @@ define('stream-pro:views/stream/notes/update', ['views/stream/notes/update'], (U
              if (this.getConfig().get('streamUpdatesExpanded')) {
                 this.$el.find('.details').removeClass('hidden');
                 this.$el.find('.fields').addClass('hidden');
+                this.$el.find('[data-action="expandDetails"] .fas')
+                .toggleClass('fa-chevron-down fa-chevron-up');
             }
             if (this.getConfig().get('streamFullDateTime')) {
                 $("div.stream-date-container a span").text(function() {
