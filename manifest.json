@@ -1,11 +1,11 @@
 {
     "name": "Stream pro",
-    "version": "2.5.1",
+    "version": "2.5.2",
     "type": "extension",
     "acceptableVersions": [
         ">=8.2.0"
     ],
-    "releaseDate": "2024-09-24",
+    "releaseDate": "2025-08-31",
     "author": "Andrew Fontana",
     "description": "Full date-time in stream with optional updates expanded."
 }
