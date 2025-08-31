@@ -1,0 +1,1 @@
+<h3><a href="#Admin">{{translate 'Administration'}}</a> &raquo {{translate 'StreamProTitle' scope='Admin'}}</h3>

@@ -1,0 +1,10 @@
+{
+    "params": {
+        "streamFullDateTime": {
+            "level": "default"
+        },
+        "streamUpdatesExpanded": {
+            "level": "default"
+        }
+    }
+}
